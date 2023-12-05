@@ -41,11 +41,7 @@ public final class Transformers {
      */
     public static <I> List<I> flatten(final Iterable<? extends Collection<I>> base) {
         // Suggestion: follow the schema of map, thus creating a new list and adding elements to it
-        var result = new ArrayList<I>();
-        for (final Collection<I> input : base) {
-            result.addAll(input);
-        }
-        return result;
+        return null;
     }
 
     /**
@@ -61,12 +57,7 @@ public final class Transformers {
      */
     public static <I> List<I> select(final Iterable<I> base, final Function<I, Boolean> test) {
         var result = new ArrayList<I>();
-        for (final I input : base) {
-            if (test.call(input)) {
-                result.add(input);
-            }
-        }
-        return result;
+        return null;
     }
 
     /**
@@ -86,11 +77,6 @@ public final class Transformers {
          * Suggestion: try to implement this function using `select`.
          * As exercise, use both anonymous classes and lambda notation.
          */
-        return select(base, new Function<I, Boolean>() {
-            @Override
-            public Boolean call(final I input) {
-                return !test.call(input);
-            }
-        });
+        return null;
     }
 }
